@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "com.kara.badgersquad.mixin",
+  "refmap": "badgersquad.refmap.json",
+  "mixins": [
+    "IceAndFireWorldUtilMixin",
+    "VampirismModPlayerEventHandlerMixin"
+  ],
+  "client": [
+    "CosmeticArmourGuiHandlerMixin",
+    "CuriosButtonAccessor",
+    "CuriosScreenAccessor",
+    "CuriosGuiEventHandlerMixin",
+    "ShipContainerScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

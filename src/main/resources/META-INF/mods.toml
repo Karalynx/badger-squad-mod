@@ -1,0 +1,25 @@
+
+modLoader="javafml"
+loaderVersion="[47,)"
+license="GPL-3.0"
+
+[[mods]]
+modId="badgersquad"
+version="1.0.0"
+displayName="Badger Squad"
+
+[[dependencies.badgersquad]]
+modId="forge"
+mandatory=true
+versionRange="[46,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.badgersquad]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1]"
+ordering="NONE"
+side="CLIENT"
+
+mixinConfigs = "badgersquad.mixins.json"
