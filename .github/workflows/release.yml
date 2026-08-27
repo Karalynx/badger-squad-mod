@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      
+      - name: Set up Java
+        uses: actions/setup-java@v6.0.0
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build
+        run: chmod +x ./gradlew && ./gradlew clean build
+
+      - name: Release
+        uses: Kira-NT/mc-publish@v3.3.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
